@@ -1,0 +1,169 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+  
+{% block content %}
+  <!-- =========={ MAIN }==========  -->
+  <main id="content">
+    <!-- advertisement -->
+    <div class="bg-gray-50 py-4 hidden">
+      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="mx-auto table text-center text-sm">
+          <a class="uppercase" href="#">Reklam</a>
+          <a href="#">
+            <img src="{% static 'src/img/ads/ads_728.jpg' %}" alt="advertisement area">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- block news -->
+    <div class="bg-gray-50 py-6">
+      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="flex flex-row flex-wrap">
+          <!-- Left -->
+          <div class="flex-shrink max-w-full w-full lg:w-2/3  overflow-hidden">
+            <div class="w-full py-3">
+              <h2 class="text-gray-800 text-2xl font-bold">
+                <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Spor Haberleri
+              </h2>
+            </div>
+            <div class="flex flex-row flex-wrap -mx-3">
+              <div class="flex-shrink max-w-full w-full px-3 pb-5">
+                <div class="relative hover-img max-h-98 overflow-hidden">
+                  <!--thumbnail-->
+                  <a href="premier-ligde-sezonun-oyunucu-erling-haaland.html">
+                    <img class="max-w-full w-full mx-auto h-auto" src="{% static 'src/img/soccer/europa/haaland.webp' %}" alt="Image description">
+                  </a>
+                  <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
+                    <!--title-->
+                    <a href="premier-ligde-sezonun-oyunucu-erling-haaland.html">
+                      <h2 class="text-3xl font-bold capitalize text-white mb-3">Premier Lig’de Sezonun Futbolcusu Erling Haaland</h2>
+                    </a>
+                    <p class="text-gray-100 hidden sm:inline-block">Premier Lig’de 2022-2023 sezonunun oyuncusu Manchester City formasıyla rekorlar kıran Erling Haaland seçildi.</p>                                                  
+                    <!-- author and date -->
+                    <div class="pt-2">
+                      <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div><a class="text-white" href="soccer.html">Futbol</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
+                <div class="flex flex-row sm:block hover-img">
+                  <a href="lakers-seriye-maglubiyetle-basladi.html">
+                    <img class="max-w-full w-full mx-auto" src="{% static 'src/img/basketball/europa/lakers.webp' %}" alt="alt title">
+                  </a>
+                  <div class="py-0 sm:py-3 pl-3 sm:pl-0">
+                    <h3 class="text-lg font-bold leading-tight mb-2">
+                      <a href="lakers-seriye-maglubiyetle-basladi.html">Lakers NBA Batı Konferansı Final Serisine Mağlubiyetle Başladı</a>
+                    </h3>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">NBA Batı Konferansı final serisi ilk maçında Denver Nuggets, evinde Los Angeles Lakers'ı 132-126'lık skorla mağlup etti.</p>
+                    <a class="text-gray-500" href="basketball.html"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Basketbol</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- right -->
+          <div class="flex-shrink max-w-full w-full lg:w-1/3 lg:pl-8 lg:pt-14 lg:pb-8 order-first lg:order-last">
+            <div class="w-full bg-white">
+              <div class="mb-6">
+                <div class="p-4 bg-gray-100">
+                  <h2 class="text-lg font-bold">En Popüler Aramalar</h2>
+                </div>
+                <ul class="post-number">
+                  <li class="border-b border-gray-100 hover:bg-gray-50">
+                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="premier-ligde-sezonun-oyunucu-erling-haaland.html">Premier Lig’de Sezonun Futbolcusu Erling Haaland</a>
+                  </li>
+                  <li class="border-b border-gray-100 hover:bg-gray-50">
+                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="jude-bellinghamin-gelecek-sezonki-takimi-belli-oldu-6-yillik-sozlesme.html">Jude Bellingham’ın Gelecek Sezonki Takımı Belli Oldu! 6 Yıllık Sözleşme</a>
+                  </li>
+                  <li class="border-b border-gray-100 hover:bg-gray-50">
+                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="vakifbank-sampiyonluk-kupasini-kaldirdi.html">VakıfBank Şampiyonluk Kupasını Kaldırdı</a>
+                  </li>
+                  <li class="border-b border-gray-100 hover:bg-gray-50">
+                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="besiktas-yildiz-futbolcuyla-transfer-gorusmelerine-basladi.html">Beşiktaş Yıldız Futbolcuyla Transfer Görüşmelerine Başladı!</a>
+                  </li>
+                  <li class="border-b border-gray-100 hover:bg-gray-50">
+                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="red-bull-sporcusu-kubra-daglidan-iki-altin-birden.html">Red Bull Sporcusu Kübra Dağlı'dan İki Altın Madalya</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="text-sm py-6 sticky">
+              <div class="w-full text-center">
+                <a class="uppercase" href="#">Reklam</a>
+                <a href="#">
+                  <img class="mx-auto" src="{% static 'src/img/ads/250.jpg' %}" alt="advertisement area">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+
+    <!-- slider news -->
+    <div class="relative bg-gray-50" style="background-image: url('src/img/bg.jpg');background-size: cover;background-position: center center;background-attachment: fixed">
+      <div class="bg-red bg-opacity-70">
+        <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+          <div class="flex flex-row flex-wrap">
+            <div class="flex-shrink max-w-full w-full py-12 overflow-hidden">
+              <div class="w-full py-3">
+                <h2 class="text-white text-2xl font-bold text-shadow-black">
+                  <span class="inline-block h-5 border-l-3 border-white-600 mr-2"></span>E-Spor
+                </h2>
+              </div>
+              <div id="post-carousel" class="splide post-carousel">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <div class="w-full pb-3">
+                        <div class="hover-img bg-white">
+                          <a href="">
+                            <img class="max-w-full w-full mx-auto" src="{% static 'src/img/espor/fifa.webp' %}" alt="alt title">
+                          </a>
+                          <div class="py-3 px-6">
+                            <h3 class="text-lg font-bold leading-tight mb-2">
+                              <a href="#">Premier Lig TOTS FIFA 23’e Geldi</a>
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- block news -->
+    <div class="bg-white py-6">
+      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="flex flex-row flex-wrap">
+          <div class="flex-shrink max-w-full w-full overflow-hidden">
+            <div class="flex flex-row flex-wrap -mx-3">
+              <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
+                <div class="flex flex-row sm:block hover-img">
+                  <a href="boston-celtics-miami-heat-karsisinda-ilk-galibiyetini-aldi.html">
+                    <img class="max-w-full w-full mx-auto" src="{% static 'src/img/basketball/europa/miami.webp' %}" alt="alt title">
+                  </a>
+                  <div class="py-0 sm:py-3 pl-3 sm:pl-0">
+                    <h3 class="text-lg font-bold leading-tight mb-2">
+                      <a href="boston-celtics-miami-heat-karsisinda-ilk-galibiyetini-aldi.html">Boston Celtics, Miami Heat Karşısında İlk Galibiyetini Aldı</a>
+                    </h3>
+                    <p class="hidden md:block text-gray-600 leading-tight mb-1">Celtics, deplasmanda Miami Heat'i 116-99 yenerek serideki ilk galibiyetini aldı ve durumu 3-1 yaptı.</p>
+                    <a class="text-gray-500" href="basketball.html"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>Basketbol</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main><!-- end main -->
+{% endblock %}
