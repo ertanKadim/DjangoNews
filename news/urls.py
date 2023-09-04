@@ -6,8 +6,12 @@ from django.conf import settings
 urlpatterns = [
     path('', views.index, name='index'),
     path('post/<slug>/', views.post_detail, name= 'post_detail'),
-    path('about/', views.about, name='about'),
-    path('contact/', views.contact, name='contact'),
+    path('soccer/', views.soccer, name='soccer'),
+    path('basketball/', views.basketball, name='basketball'),
+    path('volleyball/', views.volleyball, name='volleyball'),
+    path('othersports/', views.othersports, name='othersports'),
+    path('about-us/', views.about, name='aboutus'),
+    path('contact-us/', views.contact, name='contactus'),
 ]
 
 

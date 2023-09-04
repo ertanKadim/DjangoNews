@@ -7,10 +7,10 @@
             <div class="flex flex-wrap flex-row lg:justify-between -mx-3">
             <div class="flex-shrink max-w-full w-full lg:w-2/5 px-3 lg:pr-16">
                 <div class="flex items-center mb-2">
-                <span class="text-3xl leading-normal mb-2 font-bold text-gray-100 mt-2">SporHE</span>
+                <span class="text-3xl leading-normal mb-2 font-bold text-gray-100 mt-2">SporNet</span>
                 <!-- <img src="src/img-min/logo.png" alt="LOGO"> -->
                 </div>
-                <p>SporHE, en güncel spor haberleri<br>ve kapsamlı analizleriyle<br>spor tutkunlarının yanında...</p>
+                <p>SporNet, en güncel spor haberleri<br>ve kapsamlı analizleriyle<br>spor tutkunlarının yanında...</p>
                 <ul class="space-x-3 mt-6 mb-6 Lg:mb-0">
                 <!--facebook-->
                 <li class="inline-block">
@@ -47,41 +47,41 @@
                 <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
                     <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Futbol</h4>
                     <ul>
-                    <li class="py-1 hover:text-white"><a href="soccer.html">La Liga</a></li>
-                    <li class="py-1 hover:text-white"><a href="soccer.html">League 1</a></li>
-                    <li class="py-1 hover:text-white"><a href="soccer.html">Premier Lig</a></li>
-                    <li class="py-1 hover:text-white"><a href="soccer.html">Serie A</a></li>
-                    <li class="py-1 hover:text-white"><a href="soccer.html">Spor Toto Süper Lig</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'soccer' %}">La Liga</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'soccer' %}">League 1</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'soccer' %}">Premier Lig</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'soccer' %}">Serie A</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'soccer' %}">Spor Toto Süper Lig</a></li>
                     </ul>
                 </div>
                 <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
                     <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Basketbol</h4>
                     <ul>
-                    <li class="py-1 hover:text-white"><a href="basketball.html">Basketbol Süper Lig</a></li>
-                    <li class="py-1 hover:text-white"><a href="basketball.html">Kadınlar</a></li>
-                    <li class="py-1 hover:text-white"><a href="basketball.html">THY Euroleague</a></li>
-                    <li class="py-1 hover:text-white"><a href="basketball.html">NBA</a></li>
-                    <li class="py-1 hover:text-white"><a href="basketball.html">7DAYS EuroCup</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'basketball' %}">Basketbol Süper Lig</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'basketball' %}">Kadınlar</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'basketball' %}">THY Euroleague</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'basketball' %}">NBA</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'basketball' %}">7DAYS EuroCup</a></li>
                     </ul>
                 </div>
                 <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
                     <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Voleybol</h4>
                     <ul>
-                    <li class="py-1 hover:text-white"><a href="volleyball.html">CEV Şampiyonlar Ligi</a></li>
-                    <li class="py-1 hover:text-white"><a href="volleyball.html">Efeler Ligi</a></li>
-                    <li class="py-1 hover:text-white"><a href="volleyball.html">Sultanlar Ligi</a></li>
-                    <li class="py-1 hover:text-white"><a href="volleyball.html">Kadınlar</a></li>
-                    <li class="py-1 hover:text-white"><a href="volleyball.html">Altyapı</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'volleyball' %}">CEV Şampiyonlar Ligi</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'volleyball' %}">Efeler Ligi</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'volleyball' %}">Sultanlar Ligi</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'volleyball' %}">Kadınlar</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'volleyball' %}">Altyapı</a></li>
                     </ul>
                 </div>
                 <div class="flex-shrink max-w-full w-1/2 md:w-1/4 mb-6 lg:mb-0">
                     <h4 class="text-base leading-normal mb-3 uppercase text-gray-100">Diğer Sporlar</h4>
                     <ul>
-                    <li class="py-1 hover:text-white"><a href="othersports.html">Atletizm</a></li>
-                    <li class="py-1 hover:text-white"><a href="othersports.html">Bisiklet</a></li>
-                    <li class="py-1 hover:text-white"><a href="othersports.html">Boks</a></li>
-                    <li class="py-1 hover:text-white"><a href="othersports.html">Güreş</a></li>
-                    <li class="py-1 hover:text-white"><a href="othersports.html">Karate</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'othersports' %}">Atletizm</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'othersports' %}">Bisiklet</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'othersports' %}">Boks</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'othersports' %}">Güreş</a></li>
+                    <li class="py-1 hover:text-white"><a href="{% url 'othersports' %}">Karate</a></li>
                     </ul>
                 </div>
                 </div>
@@ -95,7 +95,7 @@
         <div class="container py-4 border-t border-gray-200 border-opacity-10">
             <div class="row">
             <div class="col-12 col-md text-center">
-                <p class="d-block my-3">Copyright © SporHE | All rights reserved.</p>
+                <p class="d-block my-3">Copyright © SporNet | All rights reserved.</p>
             </div>
             </div>
         </div>

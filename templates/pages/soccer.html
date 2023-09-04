@@ -12,32 +12,32 @@
           <div class="flex-shrink max-w-full w-full lg:w-2/3  overflow-hidden">
             <div class="w-full py-3">
               <h2 class="text-gray-800 text-2xl font-bold">
-                <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Spor Haberleri
+                <span class="inline-block h-5 border-l-3 border-red-600 mr-2"></span>Futbol Haberleri
               </h2>
             </div>
             <div class="flex flex-row flex-wrap -mx-3">
               {% for post in posts %}
                 {% if forloop.first %}
-                  <!-- İlk haber -->
-                  <div class="flex-shrink max-w-full w-full px-3 pb-5">
-                    <div class="relative hover-img max-h-98 overflow-hidden">
-                      <!--thumbnail-->
-                      <a href="{% url 'post_detail' slug=post.slug %}">
-                        <img class="max-w-full w-full mx-auto h-auto" src="{{post.image.url}}" alt="Image description">
-                      </a>
-                      <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
-                        <!--title-->
-                        <a href="premier-ligde-sezonun-oyuncu-erling-haaland.html">
-                          <h2 class="text-3xl font-bold capitalize text-white mb-3">{{post.title}}</h2>
+                    <!-- İlk haber -->
+                    <div class="flex-shrink max-w-full w-full px-3 pb-5">
+                      <div class="relative hover-img max-h-98 overflow-hidden">
+                        <!--thumbnail-->
+                        <a href="{% url 'post_detail' slug=post.slug %}">
+                          <img class="max-w-full w-full mx-auto h-auto" src="{{post.image.url}}" alt="Image description">
                         </a>
-                        <p class="text-gray-100 hidden sm:inline-block">{{post.description}}</p>
-                        <!-- author and date -->
-                        <div class="pt-2">
-                          <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>{{post.category}}</div>
-                        </div>
+                        <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
+                          <!--title-->
+                          <a href="{% url 'post_detail' slug=post.slug %}">
+                            <h2 class="text-3xl font-bold capitalize text-white mb-3">{{post.title}}</h2>
+                          </a>
+                          <p class="text-gray-100 hidden sm:inline-block">{{post.description}}</p>
+                          <!-- author and date -->
+                          <div class="pt-2">
+                            <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>{{post.category}}</div>
+                          </div>
+                        </div> 
                       </div>
                     </div>
-                  </div>
                 {% else %}
                 {% if forloop.counter <= 25 %}
                   <!-- Son haber -->
@@ -55,8 +55,8 @@
                       </div>
                     </div>
                   </div>
-                  {% endif %}                  
-                {% endif %}
+                  {% endif %}                
+              {% endif %}
               {% endfor %}
             </div>
             

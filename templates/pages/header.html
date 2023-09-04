@@ -30,31 +30,31 @@
         <nav class="bg-black">
         <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
             <div class="flex justify-between">
-            <div class="mx-w-10 text-2xl font-bold capitalize text-white flex items-center">SporHE</div>
+            <div class="mx-w-10 text-2xl font-bold capitalize text-white flex items-center">SporNet</div>
             
             <div class="flex flex-row">
                 <!-- nav menu -->
                 <ul class="navbar hidden lg:flex lg:flex-row text-gray-400 text-sm items-center font-bold">
-                <li class="active relative border-gray-800 hover:bg-gray-900">
-                    <a class="block py-3 px-6 border-b-2 border-transparent" href="index.html">Anasayfa</a>
+                <li class="relative border-gray-800 hover:bg-gray-900">
+                    <a class="block py-3 px-6 border-b-2 border-transparent" href="/">Anasayfa</a>
                 </li>
                 <li class="relative border-gray-800 hover:bg-gray-900">
-                    <a class="block py-3 px-6 border-b-2 border-transparent" href="soccer.html">Futbol</a>
+                    <a class="block py-3 px-6 border-b-2 border-transparent" href="{% url 'soccer' %}">Futbol</a>
                 </li>
                 <li class="relative border-gray-800 hover:bg-gray-900">
-                    <a class="block py-3 px-6 border-b-2 border-transparent" href="basketball.html">Basketbol</a>
+                    <a class="block py-3 px-6 border-b-2 border-transparent" href="{% url 'basketball' %}">Basketbol</a>
                 </li>
                 <li class="relative border-gray-800 hover:bg-gray-900">
-                    <a class="block py-3 px-6 border-b-2 border-transparent" href="volleyball.html">Voleybol</a>
+                    <a class="block py-3 px-6 border-b-2 border-transparent" href="{% url 'volleyball' %}">Voleybol</a>
                 </li>
                 <li class="relative border-gray-800 hover:bg-gray-900">
-                    <a class="block py-3 px-6 border-b-2 border-transparent" href="othersports.html">Diğer Sporlar</a>
+                    <a class="block py-3 px-6 border-b-2 border-transparent" href="{% url 'othersports' %}">Diğer Sporlar</a>
                 </li>
                 <li class="relative border-gray-800 hover:bg-gray-900">
-                    <a class="block py-3 px-6 border-b-2 border-transparent" href="about-us.html">Hakkımızda</a>
+                    <a class="block py-3 px-6 border-b-2 border-transparent" href="{% url 'aboutus' %}">Hakkımızda</a>
                 </li>
                 <li class="relative border-gray-800 hover:bg-gray-900">
-                    <a class="block py-3 px-6 border-b-2 border-transparent" href="contact-us.html">İletişim</a>
+                    <a class="block py-3 px-6 border-b-2 border-transparent" href="{% url 'contactus' %}">İletişim</a>
                 </li>
                 </li>
                 </ul>
@@ -116,40 +116,40 @@
         <div class="mb-auto">
             <!--navigation-->
             <nav class="relative flex flex-wrap">
-            <div class="text-center py-4 w-full font-bold border-b border-gray-100">SporHE</div>
+            <div class="text-center py-4 w-full font-bold border-b border-gray-100">SporNet</div>
             <ul id="side-menu" class="w-full float-none flex flex-col">
                 <li class="relative">
-                <a href="index.html" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Anasayfa</a>
+                <a href="/" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Anasayfa</a>
                 </li>
                 <li class="relative">
-                <a href="soccer.html" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Futbol</a>
-                </li>
-
-                <li class="relative">
-                <a href="basketball.html" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Basketbol</a>
+                <a href="{% url 'soccer' %}/" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Futbol</a>
                 </li>
 
                 <li class="relative">
-                <a href="volleyball.html" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Voleybol</a>
+                <a href="{% url 'basketball' %}" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Basketbol</a>
                 </li>
 
                 <li class="relative">
-                <a href="othersports.html" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Diğer Sporlar</a>
+                <a href="{% url 'volleyball' %}" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Voleybol</a>
                 </li>
 
                 <li class="relative">
-                <a href="about-us.html" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Hakkımızda</a>
+                <a href="{% url 'othersports' %}" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Diğer Sporlar</a>
                 </li>
 
                 <li class="relative">
-                <a href="contact-us.html" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">İletişim</a>
+                <a href="{% url 'aboutus' %}" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">Hakkımızda</a>
+                </li>
+
+                <li class="relative">
+                <a href="{% url 'contactus' %}" class="block py-2 px-5 border-b border-gray-100 hover:bg-gray-50">İletişim</a>
                 </li>
             </ul>
             </nav>
         </div>
         <!-- copyright -->
         <div class="py-4 px-6 text-sm mt-6 text-center">
-            <p>Sporu yakından takip edin, bilgiyi anında alın!</p>
+            <p>Sporu Net Bir Bakışla Sunuyoruz.</p>
         </div>
         </nav>
     </div><!-- End Mobile menu -->
