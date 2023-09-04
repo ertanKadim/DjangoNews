@@ -4,18 +4,6 @@
 {% block content %}
   <!-- =========={ MAIN }==========  -->
   <main id="content">
-    <!-- advertisement -->
-    <div class="bg-gray-50 py-4 hidden">
-      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
-        <div class="mx-auto table text-center text-sm">
-          <a class="uppercase" href="#">Reklam</a>
-          <a href="#">
-            <img src="src/img/ads/ads_728.jpg" alt="advertisement area">
-          </a>
-        </div>
-      </div>
-    </div>
-
     <!-- block news -->
     <div class="bg-gray-50 py-6">
       <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
@@ -34,7 +22,7 @@
                   <div class="flex-shrink max-w-full w-full px-3 pb-5">
                     <div class="relative hover-img max-h-98 overflow-hidden">
                       <!--thumbnail-->
-                      <a href="premier-ligde-sezonun-oyuncu-erling-haaland.html">
+                      <a href="{% url 'post_detail' slug=post.slug %}">
                         <img class="max-w-full w-full mx-auto h-auto" src="{{post.image.url}}" alt="Image description">
                       </a>
                       <div class="absolute px-5 pt-8 pb-5 bottom-0 w-full bg-gradient-cover">
@@ -45,29 +33,29 @@
                         <p class="text-gray-100 hidden sm:inline-block">{{post.description}}</p>
                         <!-- author and date -->
                         <div class="pt-2">
-                          <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div><a class="text-white" href="soccer.html">{{post.category}}</a></div>
+                          <div class="text-gray-100"><div class="inline-block h-3 border-l-2 border-red-600 mr-2"></div>{{post.category}}</div>
                         </div>
                       </div>
                     </div>
                   </div>
-                {% endif %}
-                
-                {% if forloop.last %}
+                {% else %}
+                {% if forloop.counter <= 25 %}
                   <!-- Son haber -->
-                  <div class="flex-shrink max-w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
+                  <div class="flex-shrink max -w-full w-full sm:w-1/3 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
                     <div class="flex flex-row sm:block hover-img">
-                      <a href="lakers-seriye-maglubiyetle-basladi.html">
+                      <a href="{% url 'post_detail' slug=post.slug %}">
                         <img class="max-w-full w-full mx-auto" src="{{post.image.url}}" alt="alt title">
                       </a>
                       <div class="py-0 sm:py-3 pl-3 sm:pl-0">
                         <h3 class="text-lg font-bold leading-tight mb-2">
-                          <a href="lakers-seriye-maglubiyetle-basladi.html">{{post.title}}</a>
+                          <a href="{% url 'post_detail' slug=post.slug %}">{{post.title}}</a>
                         </h3>
                         <p class="hidden md:block text-gray-600 leading-tight mb-1">{{post.description}}</p>
-                        <a class="text-gray-500" href="basketball.html"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>{{post.category}}</a>
+                        <span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>{{post.category}}
                       </div>
                     </div>
                   </div>
+                  {% endif %}                  
                 {% endif %}
               {% endfor %}
             </div>
@@ -78,24 +66,14 @@
             <div class="w-full bg-white">
               <div class="mb-6">
                 <div class="p-4 bg-gray-100">
-                  <h2 class="text-lg font-bold">En Popüler Aramalar</h2>
+                    <h2 class="text-lg font-bold">Son Dakika</h2>
                 </div>
                 <ul class="post-number">
-                  <li class="border-b border-gray-100 hover:bg-gray-50">
-                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="premier-ligde-sezonun-oyunucu-erling-haaland.html">Premier Lig’de Sezonun Futbolcusu Erling Haaland</a>
-                  </li>
-                  <li class="border-b border-gray-100 hover:bg-gray-50">
-                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="jude-bellinghamin-gelecek-sezonki-takimi-belli-oldu-6-yillik-sozlesme.html">Jude Bellingham’ın Gelecek Sezonki Takımı Belli Oldu! 6 Yıllık Sözleşme</a>
-                  </li>
-                  <li class="border-b border-gray-100 hover:bg-gray-50">
-                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="vakifbank-sampiyonluk-kupasini-kaldirdi.html">VakıfBank Şampiyonluk Kupasını Kaldırdı</a>
-                  </li>
-                  <li class="border-b border-gray-100 hover:bg-gray-50">
-                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="besiktas-yildiz-futbolcuyla-transfer-gorusmelerine-basladi.html">Beşiktaş Yıldız Futbolcuyla Transfer Görüşmelerine Başladı!</a>
-                  </li>
-                  <li class="border-b border-gray-100 hover:bg-gray-50">
-                    <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="red-bull-sporcusu-kubra-daglidan-iki-altin-birden.html">Red Bull Sporcusu Kübra Dağlı'dan İki Altın Madalya</a>
-                  </li>
+                    {% for bn in breaking_news %}
+                    <li class="border-b border-gray-100 hover:bg-gray-50">
+                        <a class="text-lg font-bold px-6 py-3 flex flex-row items-center" href="{% url 'post_detail' slug=bn.slug %}">{{ bn.title }}</a>
+                    </li>
+                    {% endfor %}
                 </ul>
               </div>
             </div>
@@ -103,14 +81,87 @@
             <div class="text-sm py-6 sticky">
               <div class="w-full text-center">
                 <a class="uppercase" href="#">Reklam</a>
-                <a href="#">
-                  <img class="mx-auto" src="src/img/ads/250.jpg" alt="advertisement area">
+                {% for adv in advertisement %}
+                <a href="{{adv.url}}" target="_blank">
+                  <img class="mx-auto" src="{{ adv.image.url }}" alt="advertisement area" style="width: 350px; height: 350px;">
                 </a>
+                {% endfor %}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>   
+    </div>
+
+    <!-- slider news -->
+    <div class="relative bg-gray-50" style="background-image: url('src/img/bg.jpg');background-size: cover;background-position: center center;background-attachment: fixed">
+      <div class="bg-red bg-opacity-70">
+        <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+          <div class="flex flex-row flex-wrap">
+            <div class="flex-shrink max-w-full w-full py-12 overflow-hidden">
+              <div class="w-full py-3">
+                <h2 class="text-white text-2xl font-bold text-shadow-black">
+                  <span class="inline-block h-5 border-l-3 border-white-600 mr-2"></span>E-Spor
+                </h2>
+              </div>
+              <div id="post-carousel" class="splide post-carousel">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    {% for slider in sliders %}
+                    <li class="splide__slide">
+                      <div class="w-full pb-3">
+                        <div class="hover-img bg-white">
+                          <a href="">
+                            <img class="max-w-full w-full mx-auto" src="{{ slider.image.url }}" alt="alt title">
+                          </a>
+                          <div class="py-3 px-6">
+                            <h3 class="text-lg font-bold leading-tight mb-2">
+                              <a href="{% url 'post_detail' slug=slider.slug %}">{{slider.title}}</a>
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- block news -->
+    <!-- <div class="bg-white py-6">
+      <div class="xl:container mx-auto px-3 sm:px-4 xl:px-2">
+        <div class="flex flex-row flex-wrap">
+          <div class="flex-shrink max-w-full w-full overflow-hidden">
+            <div class="flex flex-row flex-wrap -mx-3">
+              {% for post in posts|slice:"10:" %}
+                  <div class="flex-shrink max-w-full w-full sm:w-1/3 lg:w-1/4 px-3 pb-3 pt-3 sm:pt-0 border-b-2 sm:border-b-0 border-dotted border-gray-100">
+                    <div class="flex flex-row sm:block hover-img">
+                      <a href="boston-celtics-miami-heat-karsisinda-ilk-galibiyetini-aldi.html">
+                        <img class="max-w-full w-full mx-auto" src="{{post.image.url}}" alt="alt title">
+                      </a>
+                      <div class="py-0 sm:py-3 pl-3 sm:pl-0">
+                        <h3 class="text-lg font-bold leading-tight mb-2">
+                          <a href="boston-celtics-miami-heat-karsisinda-ilk-galibiyetini-aldi.html">{{post.title}}</a>
+                        </h3>
+                        <p class="hidden md:block text-gray-600 leading-tight mb-1">{{post.description}}</p>
+                        <a class="text-gray-500" href="basketball.html"><span class="inline-block h-3 border-l-2 border-red-600 mr-2"></span>{{post.category}}</a>
+                      </div>
+                    </div>
+                  </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    
+
   </main><!-- end main -->
   {% endblock %}
